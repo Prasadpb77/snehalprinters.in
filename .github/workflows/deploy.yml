@@ -1,0 +1,72 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Clear old files from cPanel
+        run: |
+          echo "⚠️  Note: Please manually delete old files from public_html/ via cPanel File Manager"
+          echo "Or use the 'delete' option in FTP-Deploy-Action if supported by your version"
+      
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || '21' }}
+          protocol: ftp
+          local-dir: ./dist/
+          server-dir: ./public_html/
+          exclude: |
+            .git*
+            .gitignore
+            .github/**
+            README.md
+            node_modules/**
+            src/**
+            package*.json
+            vite.config.js
+            tailwind.config.js
+            postcss.config.js
+          state-name: deploy-state.json
+          log-level: verbose
+          dry-run: false
+      
+      - name: Deployment Status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ Deployment to cPanel completed successfully!"
+          else
+            echo "❌ Deployment failed. Please check the logs above."
+          fi
