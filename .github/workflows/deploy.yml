@@ -5,10 +5,7 @@ on:
     branches:
       - main
       - master
-  pull_request:
-    branches:
-      - main
-      - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -50,7 +47,7 @@ jobs:
             .github/**
             README.md
             node_modules/**
-            src/**
+            src/** 
             package*.json
             vite.config.js
             tailwind.config.js
