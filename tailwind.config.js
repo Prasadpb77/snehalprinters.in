@@ -8,10 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FFD662',
-        secondary: '#00539C',
-        dark: '#0a0a0a',
-        light: '#f8f9fa',
+        primary: '#2563EB',       // electric blue
+        accent: '#0EA5E9',        // sky blue
+        ink: '#0F172A',           // deep navy-black
+        slate: '#1E293B',         // card dark
+        light: '#F8FAFC',
+        muted: '#64748B',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

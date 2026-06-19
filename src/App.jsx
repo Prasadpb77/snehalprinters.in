@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
-import Testimonials from './components/Testimonials'
 import Clients from './components/Clients'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -23,13 +22,12 @@ function App() {
   }, [darkMode])
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark bg-dark text-white' : 'bg-light text-dark'}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'dark bg-ink text-white' : 'bg-light text-ink'}`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <About />
       <Services />
       <Portfolio />
-      <Testimonials />
       <Clients />
       <Contact />
       <Footer />
