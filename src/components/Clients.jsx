@@ -25,7 +25,7 @@ const Clients = () => {
           <h2 className="section-title">Our Clients</h2>
           <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mt-2 text-sm">
             Proud to serve 500+ businesses across Pune and Maharashtra
-          </p>
+          </p> 
         </motion.div>
 
         <div className="relative overflow-hidden">
