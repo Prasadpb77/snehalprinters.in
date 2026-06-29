@@ -37,17 +37,17 @@ const ChatWidget = () => {
     } else if (lowerQuestion.includes('need something') || lowerQuestion.includes('not in') || lowerQuestion.includes('listed')) {
       return {
         type: 'bot',
-        text: 'If you need something that\'s not in our listed products, please contact us! We specialize in custom printing solutions and can accommodate your specific requirements.\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 7755904602'
+        text: 'If you need something that\'s not in our listed products, please contact us! We specialize in custom printing solutions and can accommodate your specific requirements.\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 9503105900'
       }
     } else if (lowerQuestion.includes('query') || lowerQuestion.includes('other') || lowerQuestion.includes('help')) {
       return {
         type: 'bot',
-        text: 'For any other queries, please feel free to contact us:\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 7755904602\n📍 Address: Sr. No. 35/3, Near St. Ursula School, Behind Hanuman Mandir, Dattawadi, Akurdi, Pune - 411 035, Maharashtra, India\n\nWe\'re here to help! 😊'
+        text: 'For any other queries, please feel free to contact us:\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 9503105900\n📍 Address: Sr. No. 35/3, Near St. Ursula School, Behind Hanuman Mandir, Dattawadi, Akurdi, Pune - 411 035, Maharashtra, India\n\nWe\'re here to help! 😊'
       }
     } else {
       return {
         type: 'bot',
-        text: 'Thank you for your message! For any inquiries, please contact us:\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 7755904602\n\nOur team will get back to you shortly.'
+        text: 'Thank you for your message! For any inquiries, please contact us:\n\n📧 Email: info@snehalprinters.in\n📞 Phone: 9503105900\n\nOur team will get back to you shortly.'
       }
     }
   }

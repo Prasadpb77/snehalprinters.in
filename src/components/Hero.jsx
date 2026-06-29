@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl font-light text-slate-400 mb-10 tracking-widest uppercase"
+            className="text-lg md:text-xl font-light text-white/80 mb-10 tracking-widest uppercase"
           >
             Advertising · Design · Printing
           </motion.p>

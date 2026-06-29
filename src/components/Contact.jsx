@@ -33,8 +33,8 @@ const Contact = () => {
         </svg>
       ),
       label: 'Phone',
-      value: '+91 7755 904 602',
-      href: 'tel:+917755904602',
+      value: '+91 9503 105 900',
+      href: 'tel:+919503105900',
     },
     {
       icon: (
@@ -100,7 +100,7 @@ const Contact = () => {
 
             {/* WhatsApp CTA */}
             <motion.a
-              href="https://wa.me/917755904602"
+              href="https://wa.me/919503105900"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}

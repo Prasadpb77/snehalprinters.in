@@ -15,12 +15,12 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3 mt-6">
               <motion.a
-                href="tel:+917755904602"
+                href="tel:+919503105900"
                 whileHover={{ y: -2 }}
                 className="flex items-center space-x-2 bg-white/5 hover:bg-primary/20 text-slate-300 hover:text-white border border-white/10 hover:border-primary/30 px-4 py-2.5 rounded-xl text-sm transition-all"
               >
                 <i className="fas fa-phone text-primary text-xs" />
-                <span>7755904602</span>
+                <span>9503105900</span>
               </motion.a>
               <motion.a
                 href="mailto:info@snehalprinters.in"

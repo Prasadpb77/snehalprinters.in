@@ -76,11 +76,11 @@ const Header = ({ darkMode, setDarkMode }) => {
             {/* Contact quick links - desktop */}
             <div className="hidden xl:flex items-center space-x-4 mr-2">
               <a
-                href="tel:+917755904602"
+                href="tel:+919503105900"
                 className={`flex items-center space-x-2 text-sm font-medium ${darkMode ? 'text-slate-300' : 'text-slate-600'} hover:text-primary transition-colors`}
               >
                 <i className="fas fa-phone-alt text-primary text-xs"></i>
-                <span>7755904602</span>
+                <span>9503105900</span>
               </a>
             </div>
 
